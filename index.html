@@ -4,37 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>阿鵝信用合作社 | 代購專案</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        :root {
+            --primary-bg: #f8f9fa;
+            --accent-color: #4a5d4e; /* 深綠色，質感最高 */
+            --card-bg: #ffffff;
+            --text-main: #333333;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo { font-size: 60px; margin-bottom: 10px; }
+        h1 { margin: 0; font-size: 1.8rem; letter-spacing: 2px; }
+        .sub-title { color: #888; margin-top: 5px; }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 { border-bottom: 2px solid var(--accent-color); display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover { transform: translateY(-5px); }
+
+        .card-info h3 { margin: 0 0 10px 0; color: var(--accent-color); }
+        .date-tag { font-size: 0.9rem; color: #d9534f; font-weight: bold; }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff !important;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover { opacity: 0.8; }
+
+        .locked { opacity: 0.6; background-color: #eee; }
+
+        footer { text-align: center; padding: 40px; color: #bbb; font-size: 0.8rem; }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">🐧</div>
         <h1>阿鵝信用合作社</h1>
-        <p>日本代購連線服務</p>
+        <p class="sub-title">良日屋｜日本代購連線服務</p>
     </header>
 
     <main class="container">
         <section class="catalog-list">
             <h2>當前連線活動</h2>
+            
             <div class="project-card">
                 <div class="card-info">
                     <h3>🔥 GU × rokh 2026 聯名系列</h3>
-                    <p>連線日期：4/1 - 4/10</p>
-                    <a href="pages/gu-rokh.html" class="btn">進入目錄</a>
+                    <p class="date-tag">連線日期：4/1 - 4/10 24:00 截止</p>
+                    <p>由阿鵝親自採購，熱門款秒缺貨預警！</p>
+                    <a href="pages/gu-rokh.html" class="btn">進入目錄頁面</a>
                 </div>
             </div>
             
             <div class="project-card locked">
                 <div class="card-info">
                     <h3>💊 名古屋藥妝/Donki 代購</h3>
-                    <p>下一場準備中...</p>
+                    <p>下一場準備中，敬請期待...</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 阿鵝信用合作社. All Rights Reserved.</p>
+        <p>© 2026 阿鵝信用合作社｜良日屋. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
