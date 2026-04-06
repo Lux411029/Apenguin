@@ -3,107 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>阿鵝信用合作社 | 代購專案</title>
+    <title>GU × rokh 聯名目錄 | 阿鵝信用合作社</title>
     <style>
         :root {
-            --primary-bg: #f8f9fa;
-            --accent-color: #4a5d4e; /* 深綠色，質感最高 */
-            --card-bg: #ffffff;
-            --text-main: #333333;
+            --primary-bg: #fdfcf9;
+            --accent-color: #4a5d4e;
+            --text-main: #333;
         }
 
         body {
-            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            font-family: "PingFang TC", sans-serif;
             background-color: var(--primary-bg);
-            color: var(--text-main);
             margin: 0;
-            line-height: 1.6;
+            color: var(--text-main);
+        }
+
+        nav {
+            padding: 20px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: bold;
         }
 
         header {
             text-align: center;
-            padding: 60px 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-        }
-
-        .logo { font-size: 60px; margin-bottom: 10px; }
-        h1 { margin: 0; font-size: 1.8rem; letter-spacing: 2px; }
-        .sub-title { color: #888; margin-top: 5px; }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
             padding: 40px 20px;
         }
 
-        h2 { border-bottom: 2px solid var(--accent-color); display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
-
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border: 1px solid #f0f0f0;
-            transition: transform 0.3s ease;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .project-card:hover { transform: translateY(-5px); }
+        /* 網格排版：手機 1 欄，平板以上 2 欄 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
 
-        .card-info h3 { margin: 0 0 10px 0; color: var(--accent-color); }
-        .date-tag { font-size: 0.9rem; color: #d9534f; font-weight: bold; }
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #f0f0f0;
+        }
 
-        .btn {
+        .card:hover { transform: translateY(-5px); }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-id { font-size: 0.8rem; color: #999; margin-bottom: 5px; }
+        .card-title { font-size: 1.1rem; font-weight: bold; margin: 5px 0; color: #444; }
+        .card-tag { 
+            display: inline-block; 
+            background: #f0f4f1; 
+            color: var(--accent-color); 
+            padding: 2px 10px; 
+            border-radius: 5px; 
+            font-size: 0.8rem; 
+        }
+
+        footer { text-align: center; padding: 60px 20px; color: #bbb; }
+
+        .cta-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 50px;
+            border: 2px dashed var(--accent-color);
+        }
+
+        .btn-order {
             display: inline-block;
-            background-color: var(--accent-color);
+            background: var(--accent-color);
             color: #fff !important;
-            padding: 12px 30px;
+            padding: 15px 40px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
             margin-top: 20px;
-            transition: opacity 0.3s;
         }
-
-        .btn:hover { opacity: 0.8; }
-
-        .locked { opacity: 0.6; background-color: #eee; }
-
-        footer { text-align: center; padding: 40px; color: #bbb; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">🐧</div>
-        <h1>阿鵝信用合作社</h1>
-        <p class="sub-title">良日屋｜日本代購連線服務</p>
-    </header>
 
-    <main class="container">
-        <section class="catalog-list">
-            <h2>當前連線活動</h2>
-            
-            <div class="project-card">
-                <div class="card-info">
-                    <h3>🔥 GU × rokh 2026 聯名系列</h3>
-                    <p class="date-tag">連線日期：4/1 - 4/10 24:00 截止</p>
-                    <p>由阿鵝親自採購，熱門款秒缺貨預警！</p>
-                    <a href="pages/gu-rokh.html" class="btn">進入目錄頁面</a>
-                </div>
-            </div>
-            
-            <div class="project-card locked">
-                <div class="card-info">
-                    <h3>💊 名古屋藥妝/Donki 代購</h3>
-                    <p>下一場準備中，敬請期待...</p>
-                </div>
-            </div>
-        </section>
-    </main>
+<nav><a href="../index.html">🏠 返回首頁</a></nav>
 
-    <footer>
-        <p>© 2026 阿鵝信用合作社｜良日屋. All Rights Reserved.</p>
-    </footer>
+<header>
+    <h1>GU × rokh 2026 春季聯名</h1>
+    <p>🌷 截止日期：4/10 24:00 | 匯率 0.28 (含手續費)</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <img src="../img/360229.png" alt="腰部縮口荷葉夾克">
+            <div class="card-content">
+                <div class="card-id">編號：360229</div>
+                <div class="card-title">腰部縮口荷葉夾克</div>
+                <div class="card-tag">rokh 經典剪裁</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/360191.png" alt="羅紋荷葉邊針織開襟衫">
+            <div class="card-content">
+                <div class="card-id">編號：360191</div>
+                <div class="card-title">羅紋荷葉邊針織開襟衫</div>
+                <div class="card-tag">熱銷款🔥</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/360195_black.png" alt="刺繡蕾絲蓬蓬袖上衣">
+            <div class="card-content">
+                <div class="card-id">編號：360195</div>
+                <div class="card-title">刺繡蕾絲蓬蓬袖上衣</div>
+                <div class="card-tag">精緻刺繡✨</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/360194.png" alt="工裝風抽繩短袖襯衫">
+            <div class="card-content">
+                <div class="card-id">編號：360194</div>
+                <div class="card-title">工裝風抽繩短袖襯衫</div>
+                <div class="card-tag">多口袋設計</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/360384.png" alt="刺繡蕾絲細肩帶長洋裝">
+            <div class="card-content">
+                <div class="card-id">編號：360384</div>
+                <div class="card-title">刺繡蕾絲細肩帶長洋裝</div>
+                <div class="card-tag">層次穿搭推薦</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/360190.png" alt="扭結領結絞花針織短袖">
+            <div class="card-content">
+                <div class="card-id">編號：360190</div>
+                <div class="card-title">扭結領結絞花針織短袖</div>
+                <div class="card-tag">細節亮點</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cta-box">
+        <h3>選好心儀的商品了嗎？</h3>
+        <p>請記下「商品名稱、尺寸、顏色」</p>
+        <a href="#" class="btn-order">前往 LINE 群組記事本下單</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 阿鵝信用合作社 | 良日屋</p>
+</footer>
+
 </body>
 </html>
